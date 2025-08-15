@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dla Ciebie, Kochanie ❤️</title>
+    <style>
+        /* --- GŁÓWNE STYLE STRONY --- */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff; /* Białe tło */
+            overflow: hidden; /* Ukrywa paski przewijania */
+        }
+
+        /* --- KONTENER NA TREŚĆ (do wyśrodkowania) --- */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 100% wysokości ekranu */
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* --- GŁÓWNY NAPIS --- */
+        h1 {
+            font-size: 3.5rem; /* Duży rozmiar czcionki */
+            color: #333; /* Ciemnoszary kolor dla lepszej czytelności */
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 2s ease-in-out; /* Animacja pojawiania się */
+        }
+
+        /* --- LINK Z SERDUSZKIEM --- */
+        .heart-link {
+            margin-top: 60px; /* Odstęp od napisu */
+            text-decoration: none; /* Usuwa podkreślenie linku */
+            color: #e91e63; /* Piękny, różowy kolor */
+            font-size: 5rem; /* Bardzo duże serduszko */
+            font-weight: bold;
+            display: inline-block; /* Potrzebne do animacji */
+            animation: beat 1.5s infinite ease-in-out; /* Animacja pulsowania */
+            transition: transform 0.2s; /* Płynne powiększenie po najechaniu */
+        }
+
+        .heart-link:hover {
+            transform: scale(1.15); /* Lekkie powiększenie po najechaniu myszką */
+        }
+
+        /* --- ANIMACJE --- */
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- DEKORACJE PO BOKACH --- */
+        .decorations {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100px; /* Szerokość paska z ozdobami */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around; /* Równe odstępy między emotkami */
+            align-items: center;
+            font-size: 1.8rem; /* Rozmiar emotek */
+            opacity: 0.7; /* Lekka przezroczystość */
+        }
+
+        .decorations.left {
+            left: 20px;
+        }
+
+        .decorations.right {
+            right: 20px;
+        }
+
+        /* --- Ukrywanie dekoracji na małych ekranach (np. telefonach) --- */
+        @media (max-width: 768px) {
+            .decorations {
+                display: none;
+            }
+            h1 {
+                font-size: 2.5rem; /* Zmniejszenie napisu na telefonie */
+            }
+            .heart-link {
+                font-size: 4rem; /* Zmniejszenie serduszka */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dekoracje po lewej stronie -->
+    <div class="decorations left">
+        <span>💖</span>
+        <span>🌸</span>
+        <span>✨</span>
+        <span>🥰</span>
+        <span>🌷</span>
+    </div>
+
+    <!-- Główna treść strony -->
+    <div class="container">
+        <h1>Moja miłość jest większa od...?</h1>
+        
+        <!-- 
+            WAŻNE! 
+            Zmień "https://www.samsung.com/pl/" na adres strony, 
+            do której ma prowadzić serduszko! 
+        -->
+        <a href="https://www.samsung.com/pl/" class="heart-link" title="Kliknij mnie!">
+            ❤ -->
+        </a>
+    </div>
+
+    <!-- Dekoracje po prawej stronie -->
+    <div class="decorations right">
+        <span>🌟</span>
+        <span>💕</span>
+        <span>😍</span>
+        <span>💐</span>
+        <span>💞</span>
+    </div>
+
+</body>
+</html>
